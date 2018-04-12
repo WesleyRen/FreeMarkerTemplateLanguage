@@ -47,7 +47,7 @@ public class FreeMarker
         
         templateData.put("user", "a user");
 
-        String templateStr="Hello ${use}. ${msg}";
+        String templateStr="Hello ${user}. ${msg}";
         Template t = new Template("name", new StringReader(templateStr),cfg);
          try (StringWriter out = new StringWriter()) {
             t.process(templateData, out);
